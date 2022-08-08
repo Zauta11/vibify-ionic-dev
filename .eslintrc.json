@@ -1,11 +1,18 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "parserOptions": {
-        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
         "createDefaultProgram": true
       },
       "extends": [
@@ -14,33 +21,63 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/component-class-suffix": [
-          "error",
-          {
-            "suffixes": ["Page", "Component"]
-          }
-        ],
         "@angular-eslint/component-selector": [
-          "error",
+          "off",
           {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
+            "type": "element"
           }
         ],
         "@angular-eslint/directive-selector": [
-          "error",
+          "off",
           {
             "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
+            "prefix": "camelCase"
           }
-        ]
+        ],
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/prefer-for-of": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "brace-style": [
+          "error",
+          "1tbs"
+        ],
+        "dot-notation": "off",
+        "id-denylist": "off",
+        "id-match": "off",
+        "indent": "error",
+        "no-empty-function": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-expressions": "error",
+        "id-blacklist": [
+          "error",
+          "any",
+          "Number",
+          "String",
+          "string",
+          "Boolean",
+          "boolean",
+          "Undefined",
+          "undefined"
+        ],
+        "semi": "error"
       }
     },
     {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {}
     }
   ]
